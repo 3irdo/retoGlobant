@@ -1,0 +1,197 @@
+
+:root {
+    --bg-dark:#22272E;
+    --orange:#E07A5F;
+    --e-blue:#229ED9; 
+    --green:#81B29A;
+}
+
+@font-face{
+    font-family: 'oxanium';
+    src: url('static/font/Oxanium-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'oxanium-bold';
+    src: url('static/font/Oxanium-Bold.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  /* Otras reglas de estilo globales y estilos específicos de tu aplicación */
+  
+
+/* Reset general */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+
+/* Eliminar estilos de lista */
+ul, ol {
+  list-style: none;
+}
+
+/* Eliminar decoración de enlaces */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+body {
+    background-color: var(--bg-dark) ; 
+    /* background-color: gray; */
+    font-family: 'oxanium-bold';
+}
+
+
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+  padding: 0;
+}
+
+
+    header form {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    header button {
+        margin-left: 20px;
+    }
+
+
+/* ---- grid area -------------- */
+
+.grid-container {  display: grid;
+    grid-template-columns: 0.3fr 1.3fr;
+    grid-template-rows: 0.4fr 0.5fr 2.7fr 0.4fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "logo header"
+      "aside carousel"
+      "aside main"
+      ". footer";
+      width: 95%;
+      height: 100vh;
+      margin: 0 auto;
+  }
+  
+  .aside { grid-area: aside; }
+  
+  .logo {grid-area: logo;}
+  
+  .main { grid-area: main; }
+  
+  .footer { grid-area: footer; }
+  
+  .header { grid-area: header; }
+  
+  .carousel { grid-area: carousel; }
+
+  /* ---------------------------- */
+
+/* ----------------- aside ------------------     */
+
+
+/* .logo {
+    display: flex;
+    justify-content: center;
+} */
+
+
+aside {
+    border-right: 1px gray solid;
+}
+
+aside h2 {
+    text-align: center;
+    color: #fff;
+    font-size: 1.5rem;
+}
+
+aside ul {
+    color: #fff;
+    text-align: left;
+    margin-top: 20px;
+    font-family: 'oxanium';
+}
+/* ---------------------------------------------------- */
+
+
+/* ---------------- carousel --------------- */
+
+.carousel .row{
+    justify-content: center;
+}
+
+.carousel .inner_card {
+    border-radius: 5px;
+    background-color: #fff;
+    height: 100px;
+}
+
+
+/* --------------------------------------------- */
+
+
+/* ------------------ login ----------------------- */
+
+.login .container {
+    margin-top: 20px;
+    justify-content: center;
+}
+
+.login p {
+    text-align: center;
+    color: #fff;
+}
+
+.login input {
+     border-radius: 5px;
+}
+
+.login div {
+    color:#fff;
+    /* border: solid 1px #fff; */
+    gap:20px;
+}
+
+/* --------------------------------------------------------- */
+
+/* -------------- main --------------- */
+
+main .container {
+    max-width: 90%;
+    color: #fff;
+
+}
+
+
+main .thumbnail {
+    border-radius: 10px;
+}
+
+main .container button {
+    width:100px ;
+}
+
+/* ------------------------------------ */
+
+
+/* ---------- footer ---------- */
+.footer p {
+    text-align: center;
+    color: #fff;
+   
+}
+
+/* -------------------------------- */

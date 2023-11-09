@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>StemTeach</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="grid-container">
+
+        <header class="header">
+          <nav class="navbar mt-1">
+            <div class="container">
+              
+              <form class="d-flex" role="search">
+                <input
+                  class="form-control me-2"
+                  type="search"
+                  placeholder="Search"
+                  aria-label="Search"
+                />
+                <button class="btn btn-outline-light" type="submit">
+                  Search
+                </button>
+                <button type="button" class="btn btn-primary">
+                  <a href="login.html">login</a>
+                </button>
+              </form>
+            </div>
+          </nav>
+        </header>
+
+
+      <div class="logo d-flex justify-content-center m-2">
+        <img  class="img-fluid "  src="media/img/logo-stem.svg" alt="Logo" width="100" height="100" class="d-inline-block align-text-top">
+      </div>
+
+      <div class="carousel mt-4">
+        <div
+          id="carouselExampleAutoplaying"
+          class="carousel slide"
+          data-bs-ride="carousel"
+        >
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div class="row gap-1">
+                <div class="col-lg-2 col-12 inner_card">
+                  <img src="..." class="d-block w-100" alt="..." />
+                </div>
+                <div class="col-lg-2 col-12 inner_card">
+                  <img src="..." class="d-block w-100" alt="..." />
+                </div>
+                <div class="col-lg-2 col-12 inner_card">
+                  <img src="..." class="d-block w-100" alt="..." />
+                </div>
+                <div class="col-lg-2 col-12 inner_card">
+                  <img src="..." class="d-block w-100" alt="..." />
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="row gap-1">
+                <div class="col-lg-2 col-12 inner_card">
+                  <img src="..." class="d-block w-100" alt="..." />
+                </div>
+                <div class="col-lg-2 col-12 inner_card">
+                  <img src="..." class="d-block w-100" alt="..." />
+                </div>
+                <div class="col-lg-2 col-12 inner_card">
+                  <img src="..." class="d-block w-100" alt="..." />
+                </div>
+                <div class="col-lg-2 col-12 inner_card">
+                  <img src="..." class="d-block w-100" alt="..." />
+                </div>
+              </div>
+            </div>
+          </div>
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#carouselExampleAutoplaying"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#carouselExampleAutoplaying"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+
+        <aside class="aside mt-4">
+          <div class="d-flex flex-column max-width = 20%">
+            <h2>Temáticas</h2>
+            <ul>
+              <li class="">Ciencia</li>
+              <li class="">Tecnología</li>
+              <li class="">Ingeniería</li>
+              <li class="">Matemáticas</li>
+            </ul>
+
+          <div class="d-flex flex-column">
+            <h2>Comunidad</h2>
+            <ul>
+              <li class="">
+                <img
+                  src="media/img/telegram-logo.svg"
+                  alt="Telegram logo"
+                  width="25px"
+                  height="25px"
+                />
+                Telegram
+              </li>
+              <li class="mt-2">
+                <img
+                  src="media/img/instagram-logo.svg"
+                  alt="discord logo"
+                  width="25px"
+                  height="25px"
+                />
+                Instagram
+              </li>
+              <li class="mt-2">
+                <img
+                  src="media/img/discord-logo.svg"
+                  alt="discord logo"
+                  width="25px"
+                  height="25px"
+                />
+                Discord
+              </li>
+            </ul>
+          </div>
+        </aside>
+      
+        <main class="main me-4">
+          <div class="container mt-5 d-flex flex-column">
+          <button class="btn btn-primary">publicar</button>
+
+          <div class="thumbnail post_header my-4">
+            <img  src="media/img/cat_profile.png" class="img-fluid" alt="User thumbnail" width="45px">
+            <span>Birdo</span>
+            <span>2h 3d ago</span>
+          </div>
+
+          <div class="post d-flex flex-column">
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tenetur reiciendis id nisi. Officia quae quasi, culpa consequuntur eius perferendis. </p>
+            <img class="img-fluid" src="media/img/code-img.png" alt="">
+          </div>
+          </div>
+        </main>
+      
+
+      <div class="footer">
+        <footer><p>stemteach@gmail.com</p>
+        </footer>
+      </div>
+      
+      
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
