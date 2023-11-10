@@ -15,115 +15,150 @@
   <div class="grid-container">
 
     <header class="header">
-      <nav class="navbar mt-1">
+
+
+      <nav class="navbar navbar-expand-lg navbar-light bg-light ">
         <div class="container">
+          <a class="navbar-brand" href="index.html"><img src="media/img/logo-stem.svg" alt="StemTeach"
+              width="100px"></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02"
+            aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse " id="navbarTogglerDemo02">
 
-          <form class="d-flex" role="search">
-            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-            <button class="btn btn-outline-light" type="submit">
-              Search
-            </button>
-          </form>
 
-          <div class="modal fade" id="modalToggle" aria-hidden="true" aria-labelledby="modalToggleLabel" tabindex="-1">
-            <div class="modal-dialog modal-lg modal-dialog-centered">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h1 class="modal-title fs-5" id="modalToggleLabel">Iniciar sesión</h1>
-                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
+            <div class="d-flex flex-column d-lg-none d-sm-flex d-md-flex mt-5">
+              <h2>Temáticas</h2>
+              <ul>
+                <li class="">Ciencia</li>
+                <li class="">Tecnología</li>
+                <li class="">Ingeniería</li>
+                <li class="">Matemáticas</li>
+              </ul>
 
-                <div class="modal-body">
-                  <div class="wrapper login d-flex flex-column mt-5">
-                    <p>
-                      Al continuar, aceptas nuestro <br />Acuerdo de usuario y <br /> confirmas
-                      que has entendido <br /> la Política de privacidad
-                    </p>
-                    <div class="container d-flex flex-column flex-sm-row">
-                      <div class="d-flex flex-column">
-                        <button class="btn btn-outline-light" type="button">
-                          <img src="media/img/google-logo.svg" alt="Google logo" width="25px" height="25px" />
-                          Continuar con Google
-                        </button>
 
-                        <button class="btn btn-outline-light" type="button">
-                          <img src="media/img/github-logo.svg" alt="GitHub logo" width="25px" height="25px" />
-                          Continuar con GitHub
-                        </button>
-                      </div>
-                      <div class="inputs d-flex flex-column">
-                        <input type="text" class="form-control" placeholder="Usuario" />
-                        <input type="password" class="form-control" placeholder="Contraseña" />
-                        <button class="btn btn-outline-light mt-3" type="submit">
-                          Iniciar sesión
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="modal-footer">
-                  <span>Olvidé mi usuario o contraseña</span>
-                  <span>¿No tienes cuenta?</span>
-
-                  <button class="btn btn-primary" data-bs-target="#modalToggle2"
-                    data-bs-toggle="modal">Registrarse</button>
-                </div>
-              </div>
+              <h2>Comunidad</h2>
+              <ul>
+                <li class="mt-2">
+                  <img src="media/img/telegram-logo.svg" alt="Telegram logo" width="25px" height="25px" />
+                  Telegram
+                </li>
+                <li class="mt-2">
+                  <img src="media/img/instagram-logo.svg" alt="discord logo" width="25px" height="25px" />
+                  Instagram
+                </li>
+                <li class="mt-2">
+                  <img src="media/img/discord-logo.svg" alt="discord logo" width="25px" height="25px" />
+                  Discord
+                </li>
+              </ul>
             </div>
-          </div>
-          <div class="modal fade" id="modalToggle2" aria-hidden="true" aria-labelledby="modalToggleLabel2"
-            tabindex="-1">
-            <div class="modal-dialog modal-dialog-centered">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h1 class="modal-title fs-5" id="modalToggleLabel2">Registrarse</h1>
-                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
 
-                  <div class="wrapper login register d-flex flex-column mt-5">
-                    <p>
-                      Al continuar aceptas nuestro <br> Acuerdo de usuario y <br> confirmas que has entendido <br> la
-                      Política de
-                      privacidad
-                    </p>
-                    <div class="container d-flex flex-column flex-sm-row">
-                      <div class="inputs d-flex flex-column">
-                        <input type="mail" class="form-control" placeholder="example@gmail.com">
-                        <input type="text" class="form-control" placeholder="Usuario" />
-                        <input type="password" class="form-control" placeholder="Contraseña" />
-                        <button class="btn btn-outline-light mt-3" type="submit">
-                          Registrarse
-                        </button>
-                        <span> ¿Ya tienes cuenta? Iniciar sesión
-                        </span>
+            <form class="d-flex seacrh-form" role="search">
+              <input class="form-control me-2"  type="search" placeholder="Search" aria-label="Search">
+              <button class="btn" type="submit"><img src="media\img\search.svg" alt="search icon" width="30px"></button>
+            </form>
+            <!-- ------- modal --------------------- -->
+
+            <div class="modal fade" id="modalToggle" aria-hidden="true" aria-labelledby="modalToggleLabel"
+              tabindex="-1">
+              <div class="modal-dialog modal-lg modal-dialog-centered">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="modalToggleLabel">Iniciar sesión</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+
+                  <div class="modal-body">
+                    <div class="wrapper login d-flex flex-column mt-5">
+                      <p>
+                        Al continuar, aceptas nuestro <br />Acuerdo de usuario y <br /> confirmas
+                        que has entendido <br /> la Política de privacidad
+                      </p>
+                      <div class="container d-flex flex-column flex-sm-row">
+                        <div class="d-flex flex-column">
+                          <button class="btn btn-outline-light" type="button">
+                            <img src="media/img/google-logo.svg" alt="Google logo" width="25px" height="25px" />
+                            Continuar con Google
+                          </button>
+
+                          <button class="btn btn-outline-light" type="button">
+                            <img src="media/img/github-logo.svg" alt="GitHub logo" width="25px" height="25px" />
+                            Continuar con GitHub
+                          </button>
+                        </div>
+                        <div class="inputs d-flex flex-column">
+                          <input type="text" class="form-control" placeholder="Usuario" />
+                          <input type="password" class="form-control" placeholder="Contraseña" />
+                          <button class="btn btn-outline-light mt-3" type="submit">
+                            Iniciar sesión
+                          </button>
+                        </div>
                       </div>
                     </div>
                   </div>
 
-                </div>
-                <div class="modal-footer">
-                  <button class="btn btn-primary" data-bs-target="#modalToggle" data-bs-toggle="modal">Back to
-                    first</button>
+                  <div class="modal-footer">
+                    <span>Olvidé mi usuario o contraseña</span>
+                    <span>¿No tienes cuenta?</span>
+
+                    <button class="btn btn-primary" data-bs-target="#modalToggle2"
+                      data-bs-toggle="modal">Registrarse</button>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-          <button class="btn btn-primary" data-bs-target="#modalToggle" data-bs-toggle="modal">login</button>
+            <div class="modal fade" id="modalToggle2" aria-hidden="true" aria-labelledby="modalToggleLabel2"
+              tabindex="-1">
+              <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="modalToggleLabel2">Registrarse</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
 
+                    <div class="wrapper login register d-flex flex-column mt-5">
+                      <p>
+                        Al continuar aceptas nuestro <br> Acuerdo de usuario y <br> confirmas que has entendido <br> la
+                        Política de
+                        privacidad
+                      </p>
+                      <div class="container d-flex flex-column flex-sm-row">
+                        <div class="inputs d-flex flex-column">
+                          <input type="mail" class="form-control" placeholder="example@gmail.com">
+                          <input type="text" class="form-control" placeholder="Usuario" />
+                          <input type="password" class="form-control" placeholder="Contraseña" />
+                          <button class="btn btn-outline-light mt-3" type="submit">
+                            Registrarse
+                          </button>
+
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+                  <div class="modal-footer">
+                    <span> ¿Ya tienes cuenta?
+                    </span>
+                    <button class="btn btn-primary" data-bs-target="#modalToggle" data-bs-toggle="modal">iniciar
+                      sesión</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <button class=" login-modal-btn btn btn-outline-primary mx-2" data-bs-target="#modalToggle"
+              data-bs-toggle="modal">login</button>
+
+            <!-- ------------------------------------------- -->
+
+          </div>
         </div>
       </nav>
 
-
-
     </header>
 
-
-    <div class="logo d-flex justify-content-center m-2">
-      <a href="index.html"> <img class="img-fluid " src="media/img/logo-stem.svg" alt="Logo" width="100" height="100"
-          class="d-inline-block align-text-top"></a>
-    </div>
 
     <div class="carousel mt-4">
       <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
@@ -174,17 +209,18 @@
       </div>
     </div>
 
-    <aside class="aside mt-4 d-none d-lg-block">
-      <div class="d-flex flex-column max-width = 20%">
-        <h2>Temáticas</h2>
-        <ul>
-          <li class="">Ciencia</li>
-          <li class="">Tecnología</li>
-          <li class="">Ingeniería</li>
-          <li class="">Matemáticas</li>
-        </ul>
-
-        <div class="d-flex flex-column">
+    <aside class="aside mt-5 d-none d-lg-flex  ">
+      <div  class=" aside_container d-flex flex-column">
+        <div class=" ul_container ">
+          <h2>Temáticas</h2>
+          <ul class="">
+            <li class="">Ciencia</li>
+            <li class="">Tecnología</li>
+            <li class="">Ingeniería</li>
+            <li class="">Matemáticas</li>
+          </ul>
+        </div>
+        <div class="ul_container d-flex flex-column">
           <h2>Comunidad</h2>
           <ul>
             <li class="">
@@ -201,6 +237,7 @@
             </li>
           </ul>
         </div>
+      </div>
     </aside>
 
     <main class="main me-4">
@@ -222,7 +259,7 @@
     </main>
 
 
-    <div class="footer">
+    <div class="footer mt-4">
       <footer>
         <p>stemteach@gmail.com</p>
       </footer>

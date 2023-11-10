@@ -58,35 +58,27 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 
-    header form {
-        width: 80%;
-        margin: 0 auto;
-    }
-
-    header button {
-        margin-left: 20px;
-    }
-
+ 
 
 /* ---- grid area -------------- */
 
 .grid-container {  display: grid;
-    grid-template-columns: 0.3fr 1.3fr;
-    grid-template-rows: 0.4fr 0.5fr 2.7fr 0.4fr;
+    grid-template-columns: 0.2fr 1fr ;
+    grid-template-rows: 0.4fr 0.5fr 2.7fr 0.4fr ;
     gap: 0px 0px;
     grid-auto-flow: row;
     grid-template-areas:
-      "logo header"
-      "aside carousel"
-      "aside main"
+      "header header "
+      "aside carousel "
+      "aside main "
       ". footer";
-      width: 95%;
+      width: 100%;
       height: 100vh;
       margin: 0 auto;
   }
   
   .aside { grid-area: aside; }
-  
+   
   .logo {grid-area: logo;}
   
   .main { grid-area: main; }
@@ -108,41 +100,71 @@ h1, h2, h3, h4, h5, h6, p {
   
     .grid-container {
       grid-template-areas:
-        "logo header"
+        "header header"
         "carousel carousel"
         "main main"
         ". footer";
     }
-  }
+
+    .navbar {
+        position: relative;
+      }
+
+
+    .login-modal-btn {
+        position: absolute;
+        top: 100px;
+        right: 20px;
+        margin: 5px 0 5px 0;
+        text-decoration: none;
+    }
+
+   
+     }
   /* --------------------------------------------- */
 
-/* ----------------- aside ------------------     */
 
 
-/* .logo {
-    display: flex;
-    justify-content: center;
-} */
+  .seacrh-form {
+    width: 100%;
+  }
+  ---------- aside ------------------     */
+
+
+
 
 
 aside {
-    border-right: 1px gray solid;
+    width: 100%;
+}
+
+.aside_container {
+    width: 100%;
+    margin-top: 130px;
 }
 
 aside h2 {
     text-align: center;
     color: #fff;
     font-size: 1.5rem;
+    padding-left: 30px;
 }
 
 aside ul {
+    text-align: right;
     color: #fff;
     text-align: left;
     margin-top: 20px;
     font-family: 'oxanium';
 }
+aside ul li {
+    text-align: center;
+}
 /* ---------------------------------------------------- */
 
+header {
+    width: 100%;
+}
 
 /* ---------------- carousel --------------- */
 
@@ -158,6 +180,10 @@ aside ul {
 
 
 /* --------------------------------------------- */
+
+.navbar-brand img {
+    filter: invert();
+}
 
 
 /* ------------------ login ----------------------- */
@@ -231,7 +257,7 @@ aside ul {
 /* -------------- main --------------- */
 
 main .container {
-    max-width: 90%;
+    max-width: 80%;
     color: #fff;
 
 }
@@ -249,8 +275,11 @@ main .container button {
 
 
 /* ---------- footer ---------- */
+
+
 .footer p {
     text-align: center;
+    vertical-align: middle;
     color: #fff;
    
 }
