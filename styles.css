@@ -99,6 +99,23 @@ h1, h2, h3, h4, h5, h6, p {
 
   /* ---------------------------- */
 
+  /* ------------- pantallas pequeñas ------ */
+
+  @media (max-width: 1023px) {
+    .aside {
+      display: none;
+    }
+  
+    .grid-container {
+      grid-template-areas:
+        "logo header"
+        "carousel carousel"
+        "main main"
+        ". footer";
+    }
+  }
+  /* --------------------------------------------- */
+
 /* ----------------- aside ------------------     */
 
 
@@ -144,28 +161,72 @@ aside ul {
 
 
 /* ------------------ login ----------------------- */
+#modalToggle .modal-header, .modal-body, .modal-footer {
+    background-color: var(--bg-dark);
+    color: #fff;
+}
 
-.login .container {
+#modalToggle .modal-header{
+    color: #fff;
+}
+
+#modalToggle .modal-header button {
+    filter: invert();
+}
+
+#modalToggle .login .container {
     margin-top: 20px;
     justify-content: center;
 }
 
-.login p {
+#modalToggle .login p {
     text-align: center;
     color: #fff;
 }
 
-.login input {
-     border-radius: 5px;
-}
-
-.login div {
+#modalToggle .login div{
     color:#fff;
-    /* border: solid 1px #fff; */
     gap:20px;
 }
 
 /* --------------------------------------------------------- */
+
+/* ------------------- registro -----------------------  */
+
+#modalToggle2 .modal-header, .modal-body, .modal-footer {
+    background-color: var(--bg-dark);
+    color: #fff;
+}
+
+#modalToggle2 .modal-header{
+    color: #fff;
+}
+
+#modalToggle2 .modal-header button {
+    filter: invert();
+}
+
+#modalToggle2 .register .container {
+    margin-top: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+#modalToggle2 .register p {
+    text-align: center;
+    color: #fff;
+}
+
+#modalToggle2 .register div{
+    color:#fff;
+    gap:20px;
+}
+
+.register .inputs  {
+    color:#fff;
+}
+
+/* ---------------------------------------------- */
 
 /* -------------- main --------------- */
 
