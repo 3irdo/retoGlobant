@@ -1,27 +1,25 @@
-
 :root {
-    --bg-dark:#22272E;
-    --orange:#E07A5F;
-    --e-blue:#229ED9; 
-    --green:#81B29A;
+  --bg-dark: #22272e;
+  --orange: #e07a5f;
+  --e-blue: #229ed9;
+  --green: #81b29a;
 }
 
-@font-face{
-    font-family: 'oxanium';
-    src: url('static/font/Oxanium-Regular.woff2') format('woff2');
-    font-weight: normal;
-    font-style: normal;
-  }
+@font-face {
+  font-family: "oxanium";
+  src: url("static/font/Oxanium-Regular.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
 
-  @font-face {
-    font-family: 'oxanium-bold';
-    src: url('static/font/Oxanium-Bold.woff2') format('woff2');
-    font-weight: normal;
-    font-style: normal;
-  }
-  
-  /* Otras reglas de estilo globales y estilos específicos de tu aplicación */
-  
+@font-face {
+  font-family: "oxanium-bold";
+  src: url("static/font/Oxanium-Bold.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Otras reglas de estilo globales y estilos específicos de tu aplicación */
 
 /* Reset general */
 *,
@@ -32,10 +30,9 @@
   box-sizing: border-box;
 }
 
-
-
 /* Eliminar estilos de lista */
-ul, ol {
+ul,
+ol {
   list-style: none;
 }
 
@@ -46,210 +43,190 @@ a {
 }
 
 body {
-    background-color: var(--bg-dark) ; 
-    /* background-color: gray; */
-    font-family: 'oxanium-bold';
+  background-color: var(--bg-dark);
+  /* background-color: gray; */
+  font-family: "oxanium-bold";
 }
 
-
-h1, h2, h3, h4, h5, h6, p {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
   margin: 0;
   padding: 0;
 }
 
-
- 
-
 /* ---- grid area -------------- */
 
-.grid-container {  display: grid;
-    grid-template-columns: 0.2fr 1fr ;
-    grid-template-rows: 0.4fr 0.5fr 2.7fr 0.4fr ;
-    gap: 0px 0px;
-    grid-auto-flow: row;
-    grid-template-areas:
-      "header header "
-      "aside carousel "
-      "aside main "
-      ". footer";
-      width: 100%;
-      height: 100vh;
-      margin: 0 auto;
-  }
-  
-  .aside { grid-area: aside; }
-   
-  .logo {grid-area: logo;}
-  
-  .main { grid-area: main; }
-  
-  .footer { grid-area: footer; }
-  
-  .header { grid-area: header; }
-  
-  .carousel { grid-area: carousel; }
+.grid-container {
+  display: grid;
+  grid-template-columns: 0.3fr 1fr 0.3fr;
+  grid-template-rows: 0.4fr 0.5fr 2.7fr 0.4fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "header header header"
+    "aside carousel asideR "
+    "aside main asideR"
+    "footer footer footer";
+  width: 100%;
+  height: 100vh;
+  margin: 0 auto;
+}
 
-  /* ---------------------------- */
+.aside {
+  grid-area: aside;
+}
 
-  /* ------------- pantallas pequeñas ------ */
+.asideR {
+  grid-area: asideR;
+}
+.logo {
+  grid-area: logo;
+}
 
-  @media (max-width: 1023px) {
-    .aside {
-      display: none;
-    }
-  
-    .grid-container {
-      grid-template-areas:
-        "header header"
-        "carousel carousel"
-        "main main"
-        ". footer";
-    }
+.main {
+  grid-area: main;
+}
 
-    .navbar {
-        position: relative;
-      }
+.footer {
+  grid-area: footer;
+}
+
+.header {
+  grid-area: header;
+}
+
+.carousel {
+  grid-area: carousel;
+}
+
+/* ---------------------------- */
 
 
-    .login-modal-btn {
-        position: absolute;
-        top: 100px;
-        right: 20px;
-        margin: 5px 0 5px 0;
-        text-decoration: none;
-    }
-
-   
-     }
-  /* --------------------------------------------- */
-
-
-
-  .seacrh-form {
-    width: 100%;
-  }
-  ---------- aside ------------------     */
-
-
-
-
-
-aside {
-    width: 100%;
+.seacrh-form {
+  width: 100%;
 }
 
 .aside_container {
-    width: 100%;
-    margin-top: 130px;
+  width: 100%;
+  margin-top: 130px;
 }
 
 aside h2 {
-    text-align: center;
-    color: #fff;
-    font-size: 1.5rem;
-    padding-left: 30px;
+  text-align: center;
+  color: #fff;
+  font-size: 1.5rem;
 }
 
 aside ul {
-    text-align: right;
-    color: #fff;
-    text-align: left;
-    margin-top: 20px;
-    font-family: 'oxanium';
+  text-align: right;
+  color: #fff;
+  margin-top: 20px;
+  font-family: "oxanium";
+  text-align: justify;
+  padding-left: 30%;
 }
-aside ul li {
-    text-align: center;
-}
+
 /* ---------------------------------------------------- */
 
 header {
-    width: 100%;
+  width: 100%;
+  position: relative;
 }
+
 
 /* ---------------- carousel --------------- */
 
-.carousel .row{
-    justify-content: center;
+.carousel .row {
+  justify-content: center;
 }
 
 .carousel .inner_card {
-    border-radius: 5px;
-    background-color: #fff;
-    height: 100px;
+  border-radius: 5px;
+  background-color: #fff;
+  height: 100px;
 }
-
 
 /* --------------------------------------------- */
 
 .navbar-brand img {
-    filter: invert();
+  filter: invert();
 }
-
 
 /* ------------------ login ----------------------- */
-#modalToggle .modal-header, .modal-body, .modal-footer {
-    background-color: var(--bg-dark);
-    color: #fff;
+#modalToggle .modal-header,
+.modal-body,
+.modal-footer {
+  background-color: var(--bg-dark);
+  color: #fff;
 }
 
-#modalToggle .modal-header{
-    color: #fff;
+#modalToggle .modal-header {
+  color: #fff;
 }
 
 #modalToggle .modal-header button {
-    filter: invert();
+  filter: invert();
 }
 
 #modalToggle .login .container {
-    margin-top: 20px;
-    justify-content: center;
+  margin-top: 20px;
+  justify-content: center;
 }
 
 #modalToggle .login p {
-    text-align: center;
-    color: #fff;
+  text-align: center;
+  color: #fff;
 }
 
-#modalToggle .login div{
-    color:#fff;
-    gap:20px;
+#modalToggle .login div {
+  color: #fff;
+  gap: 20px;
 }
+
+
 
 /* --------------------------------------------------------- */
 
 /* ------------------- registro -----------------------  */
 
-#modalToggle2 .modal-header, .modal-body, .modal-footer {
-    background-color: var(--bg-dark);
-    color: #fff;
+#modalToggle2 .modal-header,
+.modal-body,
+.modal-footer {
+  background-color: var(--bg-dark);
+  color: #fff;
 }
 
-#modalToggle2 .modal-header{
-    color: #fff;
+#modalToggle2 .modal-header {
+  color: #fff;
 }
 
 #modalToggle2 .modal-header button {
-    filter: invert();
+  filter: invert();
 }
 
 #modalToggle2 .register .container {
-    margin-top: 20px;
-    justify-content: center;
-    align-items: center;
+  margin-top: 20px;
+  justify-content: center;
+  align-items: center;
 }
 
 #modalToggle2 .register p {
-    text-align: center;
-    color: #fff;
+  text-align: center;
+  color: #fff;
 }
 
-#modalToggle2 .register div{
-    color:#fff;
-    gap:20px;
+#modalToggle2 .register div {
+  color: #fff;
+  gap: 20px;
 }
 
-.register .inputs  {
-    color:#fff;
+.register .inputs {
+  color: #fff;
 }
 
 /* ---------------------------------------------- */
@@ -257,31 +234,27 @@ header {
 /* -------------- main --------------- */
 
 main .container {
-    max-width: 80%;
-    color: #fff;
-
+  max-width: 80%;
+  color: #fff;
+  text-align: justify;
 }
 
-
 main .thumbnail {
-    border-radius: 10px;
+  border-radius: 10px;
 }
 
 main .container button {
-    width:100px ;
+  width: 100px;
 }
 
 /* ------------------------------------ */
 
-
 /* ---------- footer ---------- */
 
-
 .footer p {
-    text-align: center;
-    vertical-align: middle;
-    color: #fff;
-   
+  text-align: center;
+  vertical-align: middle;
+  color: #fff;
 }
 
 /* -------------------------------- */

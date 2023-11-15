@@ -8,6 +8,7 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
   <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="mobile.css">
 </head>
 
 <body>
@@ -28,7 +29,7 @@
           <div class="collapse navbar-collapse " id="navbarTogglerDemo02">
 
 
-            <div class="d-flex flex-column d-lg-none d-sm-flex d-md-flex mt-5">
+            <div class="aside d-flex flex-column d-lg-none d-sm-flex d-md-flex mt-5">
               <h2>Temáticas</h2>
               <ul>
                 <li class="">Ciencia</li>
@@ -56,9 +57,10 @@
             </div>
 
             <form class="d-flex seacrh-form" role="search">
-              <input class="form-control me-2"  type="search" placeholder="Search" aria-label="Search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
               <button class="btn" type="submit"><img src="media\img\search.svg" alt="search icon" width="30px"></button>
             </form>
+
             <!-- ------- modal --------------------- -->
 
             <div class="modal fade" id="modalToggle" aria-hidden="true" aria-labelledby="modalToggleLabel"
@@ -159,58 +161,120 @@
 
     </header>
 
+    <!-- ------------------------- carousel ---------------------- -->
 
-    <div class="carousel mt-4">
-      <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <div class="row gap-1">
-              <div class="col-lg-2 col-12 inner_card">
-                <img src="..." class="d-block w-100" alt="..." />
-              </div>
-              <div class="col-lg-2 col-12 inner_card">
-                <img src="..." class="d-block w-100" alt="..." />
-              </div>
-              <div class="col-lg-2 col-12 inner_card">
-                <img src="..." class="d-block w-100" alt="..." />
-              </div>
-              <div class="col-lg-2 col-12 inner_card">
-                <img src="..." class="d-block w-100" alt="..." />
-              </div>
+
+
+    <div id="carouselMain" class="carousel mt-4 slide d-none d-lg-flex d-xl-flex" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div class="row gap-1">
+            <div class="col-lg-2 col-12 inner_card">
+              <img src="..." class="d-block w-100" alt="..." />
             </div>
-          </div>
-          <div class="carousel-item">
-            <div class="row gap-1">
-              <div class="col-lg-2 col-12 inner_card">
-                <img src="..." class="d-block w-100" alt="..." />
-              </div>
-              <div class="col-lg-2 col-12 inner_card">
-                <img src="..." class="d-block w-100" alt="..." />
-              </div>
-              <div class="col-lg-2 col-12 inner_card">
-                <img src="..." class="d-block w-100" alt="..." />
-              </div>
-              <div class="col-lg-2 col-12 inner_card">
-                <img src="..." class="d-block w-100" alt="..." />
-              </div>
+            <div class="col-lg-2 col-12 inner_card">
+              <img src="..." class="d-block w-100" alt="..." />
+            </div>
+            <div class="col-lg-2 col-12 inner_card">
+              <img src="..." class="d-block w-100" alt="..." />
+            </div>
+            <div class="col-lg-2 col-12 inner_card">
+              <img src="..." class="d-block w-100" alt="..." />
             </div>
           </div>
         </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
-          data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying"
-          data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
+        <div class="carousel-item">
+          <div class="row gap-1">
+            <div class="col-lg-2 col-12 inner_card">
+              <img src="..." class="d-block w-100" alt="..." />
+            </div>
+            <div class="col-lg-2 col-12 inner_card">
+              <img src="..." class="d-block w-100" alt="..." />
+            </div>
+            <div class="col-lg-2 col-12 inner_card">
+              <img src="..." class="d-block w-100" alt="..." />
+            </div>
+            <div class="col-lg-2 col-12 inner_card">
+              <img src="..." class="d-block w-100" alt="..." />
+            </div>
+          </div>
+        </div>
       </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselMain" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselMain" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
     </div>
 
+
+
+
+    <!-- -------------- carousel small ------ -->
+
+    <div id="carousel_display-small" class="carousel slide mt-lg-4 mt-md-4 d-xl-none d-lg-none d-md-block d-sm-flex">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carousel_display-small" data-bs-slide-to="0" class="active"
+          aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carousel_display-small" data-bs-slide-to="1"
+          aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carousel_display-small" data-bs-slide-to="2"
+          aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner">
+
+
+        <div class="carousel-item active">
+          <img src="media/img/code-img.png" class="d-block w-100 img-fluid" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>First slide label</h5>
+            <p>Some representative placeholder content for the first slide.</p>
+          </div>
+        </div>
+
+
+        <div class="carousel-item">
+          <img src="media/img/code-img.png" class="d-block w-100" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Second slide label</h5>
+            <p>Some representative placeholder content for the second slide.</p>
+          </div>
+        </div>
+
+
+        <div class="carousel-item">
+          <img src="media/img/code-img.png" class="d-block w-100" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Third slide label</h5>
+            <p>Some representative placeholder content for the third slide.</p>
+          </div>
+        </div>
+
+      </div>
+
+
+
+      <!-- Controles del Carrusel -->
+      <button class="carousel-control-prev" type="button" data-bs-target="#carousel_display-small" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carousel_display-small" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+
+    <!-- ------------------------------------ -->
+
+    <!-- ------------- aside ------------- -->
+
+
     <aside class="aside mt-5 d-none d-lg-flex  ">
-      <div  class=" aside_container d-flex flex-column">
+      <div class=" aside_container d-flex flex-column">
         <div class=" ul_container ">
           <h2>Temáticas</h2>
           <ul class="">
@@ -240,6 +304,10 @@
       </div>
     </aside>
 
+    <!-- --------------------------------- -->
+
+    <!-- --------------- main ---------------- -->
+
     <main class="main me-4">
       <div class="container mt-5 d-flex flex-column">
         <button class="btn btn-primary">publicar</button>
@@ -258,6 +326,7 @@
       </div>
     </main>
 
+    <!-- -------------------------- -->
 
     <div class="footer mt-4">
       <footer>
