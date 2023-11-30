@@ -1,4 +1,8 @@
-# retoGlobant
-Reto de Globant sobre reducción de la deserción en carreras STEM.
+# Firebase Fullstack Sample Project
 
-Plataforma en línea donde las personas puedan interactuar, aprender y compartir conocimientos sobre temas de carreras STEM, que tiene como objetivo brindar un espacio para reducir la deserción estudiantil.
+## Para configurar correctamente el proyecto siga los siguientes pasos:
+  - npm i (Instala las dependencias del proyecto)
+  - renombre config_sample.js a config.js
+  - Actualice el objeto firebaseConfig con los datos del proyecto creado en firebase
+  - Ejecute npm run dev 
+  - Ingrese a http://localhost:1234/

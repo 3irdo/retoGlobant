@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>StemTeach</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/mobile.css">
+</head>
+
+<body>
+
+  <div class="grid-container">
+
+    <header class="header">
+
+
+      <nav class="navbar navbar-expand-lg navbar-light bg-light ">
+        <div class="container">
+          <a class="navbar-brand" h ref="index.html"><img src="media/img/logo-stem.svg" alt="StemTeach"
+              width="100px"></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02"
+            aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse " id="navbarTogglerDemo02">
+
+
+            <div class="aside d-flex flex-column d-lg-none d-sm-flex d-md-flex mt-5">
+              <h2>Temáticas</h2>
+              <ul>
+                <li class="">Ciencia</li>
+                <li class="">Tecnología</li>
+                <li class="">Ingeniería</li>
+                <li class="">Matemáticas</li>
+              </ul>
+
+
+              <h2>Comunidad</h2>
+              <ul>
+                <li class="mt-2">
+                  <img src="media/img/telegram-logo.svg" alt="Telegram logo" width="25px" height="25px" />
+                  Telegram
+                </li>
+                <li class="mt-2">
+                  <img src="media/img/instagram-logo.svg" alt="discord logo" width="25px" height="25px" />
+                  Instagram
+                </li>
+                <li class="mt-2">
+                  <img src="media/img/discord-logo.svg" alt="discord logo" width="25px" height="25px" />
+                  Discord
+                </li>
+              </ul>
+            </div>
+
+            <form class="d-flex seacrh-form" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn" type="submit"><img src="media/img/search.svg" alt="search icon" width="30px"></button>
+            </form>
+
+            <!-- ------- modal --------------------- -->
+
+            <div class="modal fade" id="modalToggle" aria-hidden="true" aria-labelledby="modalToggleLabel"
+              tabindex="-1">
+              <div class="modal-dialog modal-lg modal-dialog-centered">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="modalToggleLabel">Iniciar sesión</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+
+                  <div class="modal-body">
+                    <div class="wrapper login d-flex flex-column mt-5">
+                      <p>
+                        Al continuar, aceptas nuestro <br />Acuerdo de usuario y <br /> confirmas
+                        que has entendido <br /> la Política de privacidad
+                      </p>
+                      <div class="container d-flex flex-column flex-sm-row">
+                        <div class="d-flex flex-column">
+                          <button class="btn btn-outline-light" type="button">
+                            <img src="media/img/google-logo.svg" alt="Google logo" width="25px" height="25px" />
+                            Continuar con Google
+                          </button>
+
+                          <button class="btn btn-outline-light" type="button">
+                            <img src="media/img/github-logo.svg" alt="GitHub logo" width="25px" height="25px" />
+                            Continuar con GitHub
+                          </button>
+                        </div>
+                        <div class="inputs d-flex flex-column">
+                          <input id="txt_email" type="text" class="form-control" placeholder="Usuario" />
+                          <input id="txt_clave" type="password" class="form-control" placeholder="Contraseña" />
+                          <button id="btn_enviar" class="btn btn-outline-light mt-3" type="submit">
+                            Iniciar sesión
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="modal-footer">
+                    <span>Olvidé mi usuario o contraseña</span>
+                    <span>¿No tienes cuenta?</span>
+
+                    <button class="btn btn-primary" data-bs-target="#modalToggle2"
+                      data-bs-toggle="modal">Registrarse</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="modal fade" id="modalToggle2" aria-hidden="true" aria-labelledby="modalToggleLabel2"
+              tabindex="-1">
+              <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+
+                  <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="modalToggleLabel2">Registrarse</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+
+                    <div class="wrapper login register d-flex flex-column mt-5">
+                      <p>
+                        Al continuar aceptas nuestro <br> Acuerdo de usuario y <br> confirmas que has entendido <br>
+                        la
+                        Política de
+                        privacidad
+                      </p>
+
+                      <div class="container d-flex flex-column flex-sm-row">
+
+                        <div class="inputs form-group d-flex flex-column">
+                          <form id="register-form"  action="">
+
+                          <input id="rMail" type="mail" class="form-control" placeholder="example@gmail.com">
+
+                          <input id="rUser" type="text" class="form-control" placeholder="Usuario" />
+
+                          <input id="rPass" type="password" class="form-control" placeholder="Contraseña" />
+
+                          <button class="btn btn-outline-light mt-3" type="submit">
+                            Registrarse
+                          </button>
+                          </form>
+
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+                  <div class="modal-footer">
+                    <span> ¿Ya tienes cuenta?
+                    </span>
+                    <button class="btn btn-primary" data-bs-target="#modalToggle" data-bs-toggle="modal">iniciar
+                      sesión</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <button class=" login-modal-btn btn btn-outline-primary mx-2" data-bs-target="#modalToggle"
+              data-bs-toggle="modal">login</button>
+
+            <!-- ------------------------------------------- -->
+
+          </div>
+        </div>
+      </nav>
+
+    </header>
+
+    <!-- ------------------------- carousel ---------------------- -->
+
+
+
+    <div id="carouselMain" class="carousel mt-4 slide d-none d-lg-flex d-xl-flex flex-column" data-bs-ride="carousel">
+      <h2 class="carousel_title">Últimas interacciones</h2>
+      <div class="carousel-inner ">
+        <div class="carousel-item active"></div>
+        <div class="carousel-item"></div>
+      </div>
+
+
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselMain" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselMain" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+    
+
+    
+
+
+
+
+    <!-- -------------- carousel small ------ -->
+
+    <div id="carousel_display-small" class="carousel slide mt-lg-4 mt-md-4 d-xl-none d-lg-none d-md-block d-sm-flex">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carousel_display-small" data-bs-slide-to="0" class="active"
+          aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carousel_display-small" data-bs-slide-to="1"
+          aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carousel_display-small" data-bs-slide-to="2"
+          aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner">
+
+
+        <div class="carousel-item active">
+          <img src="media/img/code-img.png" class="d-block w-100 img-fluid" alt="media/img/code-img.png">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>First slide label</h5>
+            <p>Some representative placeholder content for the first slide.</p>
+          </div>
+        </div>
+
+
+        <div class="carousel-item">
+          <img src="media/img/code-img.png" class="d-block w-100" alt="media/img/code-img.png">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Second slide label</h5>
+            <p>Some representative placeholder content for the second slide.</p>
+          </div>
+        </div>
+
+
+        <div class="carousel-item">
+          <img src="media/img/code-img.png" class="d-block w-100" alt="media/img/code-img.png">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Third slide label</h5>
+            <p>Some representative placeholder content for the third slide.</p>
+          </div>
+        </div>
+
+      </div>
+
+
+
+      <!-- Controles del Carrusel -->
+      <button class="carousel-control-prev" type="button" data-bs-target="#carousel_display-small" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carousel_display-small" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+
+    <!-- ------------------------------------ -->
+
+    <!-- ------------- aside ------------- -->
+
+
+    <aside class="aside mt-5 d-none d-lg-flex  ">
+      <div class=" aside_container d-flex flex-column">
+        <div class=" ul_container ">
+          <h2>Temáticas</h2>
+          <ul class="">
+            <li class="">Ciencia</li>
+            <li class="">Tecnología</li>
+            <li class="">Ingeniería</li>
+            <li class="">Matemáticas</li>
+          </ul>
+        </div>
+        <div class="ul_container d-flex flex-column">
+          <h2>Comunidad</h2>
+          <ul>
+            <li class="">
+              <img src="media/img/telegram-logo.svg" alt="Telegram logo" width="25px" height="25px" />
+              Telegram
+            </li>
+            <li class="mt-2">
+              <img src="media/img/instagram-logo.svg" alt="Instagram logo" width="25px" height="25px" />
+              Instagram
+            </li>
+            <li class="mt-2">
+              <img src="media/img/discord-logo.svg" alt="discord logo" width="25px" height="25px" />
+              Discord
+            </li>
+          </ul>
+        </div>
+      </div>
+    </aside>
+
+    <!-- --------------------------------- -->
+
+    <!-- --------------- main ---------------- -->
+
+    <main class="main me-4">
+
+      <button type="button" class="mt-5 btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+        Publicar
+      </button>
+
+      <!-- Modal -->
+      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="exampleModalLabel">Publicar</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <form id="post-form">
+                <div class="mb-3">
+                  <label for="post-title" class="form-label">Título:</label>
+                  <input type="text" class="form-control" id="post-title" placeholder="Ingrese el título" required>
+                </div>
+
+                <div class="mb-3">
+                  <label for="post-description" class="form-label">Descripción:</label>
+                  <textarea class="form-control" id="post-description" rows="3"
+                    placeholder="Ingrese la descripción"></textarea>
+                </div>
+
+                <div class="mb-3">
+                  <label for="post-image" class="form-label">Subir imagen:</label>
+                  <input type="url" class="form-control" id="post-image">
+                </div>
+
+                <button id="publicar-btn" type="submit" class="btn btn-primary">Publicar</button>
+
+              </form>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+
+
+      <div id="post-container">
+
+      </div>
+
+      <!-- <div class="thumbnail post_header my-4">
+          <img src="media/img/cat_profile.png" class="img-fluid" alt="User thumbnail" width="45px">
+          <span>Birdo</span>
+          <span>2h 3d ago</span>
+        </div>
+
+        <div class="post d-flex flex-column">
+          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tenetur reiciendis id nisi. Officia quae quasi,
+            culpa consequuntur eius perferendis. </p>
+          <img class="img-fluid" src="media/img/code-img.png" alt="">
+
+          
+          <div class="post-icons mt-3">
+            <img src="media/img/me-gusta-icon.png" width="45px" alt="Me gusta" class="icon-button">
+            <img src="media/img/comentar-icon.png" width="45px" alt="Comentar" class="icon-button" id="comentar-icon">
+            <img src="media/img/compartir-icon.png" width="45px" alt="Compartir" class="icon-button">
+          </div>
+        </div>
+      </div>  -->
+
+    </main>
+
+
+    <div class="footer mt-4">
+      <footer>
+        <p>stemteach@gmail.com</p>
+      </footer>
+    </div>
+
+
+  </div>
+
+  <script type="module" src="js/config.js"></script>
+  <script type="module" src="js/post.js"></script>
+  <script type="module" src="js/register.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
