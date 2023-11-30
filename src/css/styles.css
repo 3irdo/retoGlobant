@@ -170,6 +170,7 @@ header {
   color: #fff;
   font-size: 1rem;
   top: calc(60%);
+  left: calc(20%);
   text-shadow: 1px #22272e;
   padding: 2px;
 }
