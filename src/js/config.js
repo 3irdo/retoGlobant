@@ -6,6 +6,9 @@ import {
   addDoc,
   getDocs,
   onSnapshot,
+  query,
+  limit,
+  orderBy
 } from 'firebase/firestore';
 
 import { getAuth, createUserWithEmailAndPassword } from 'firebase/auth';
@@ -20,7 +23,7 @@ const auth = getAuth(app);
 
 const db = getFirestore(app);
 
-export { db, collection, addDoc, getDocs, auth, onSnapshot };
+export { db, collection, addDoc, getDocs, auth, onSnapshot, query, limit, orderBy };
 
 export const saveTask = (title, description, imgUrl) =>
   addDoc(collection(db, 'publicaciones'), { title, description, imgUrl });

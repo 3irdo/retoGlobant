@@ -5,6 +5,8 @@
 /.firebase-cache
 /dist
 /firebaseCredentials.js
+/.parcel-cache
+.parcel-cache
 
 # Logs
 logs

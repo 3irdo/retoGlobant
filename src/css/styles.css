@@ -151,9 +151,22 @@ header {
 }
 
 .carousel .inner_card {
-  /* border-radius: 5px; */
-  background-color: #fff;
-  height: 250px;
+  position: relative;
+  border-radius: 5px;
+  
+}
+
+.carousel_img {
+  width: 100%;
+object-fit: cover;
+ 
+}
+
+.carousel-content_title {
+  position: absolute;
+  color: #fff;
+ font-size: 1rem;
+  top: calc(60%);
 }
 
 

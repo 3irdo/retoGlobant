@@ -6,32 +6,47 @@ import {
 
 const postForm = document.getElementById('post-form');
 const postContainer = document.getElementById('post-container');
-const carouselItems = document.querySelectorAll('.carousel-item');
+const carouselItems = document.querySelectorAll('.inner_card');
+
 
 window.addEventListener('DOMContentLoaded', async () => {
   onGetPost((querySnapshot) => {
     let pintarPublicacion = '';
 
+    const latestPosts = [];
+
     querySnapshot.forEach(doc => {
       const datos = doc.data();
+      latestPosts.push({
+        title: datos.title,
+        imgUrl: datos.imgUrl
+      });
+
       pintarPublicacion += `
-        <div class="posts_content" >
+        <div class="posts_content">
           <h3>${datos.title}</h3>
-          <p>${datos.description}</p>      
+          <p>${datos.description}</p>
           <img class="fluid" src="${datos.imgUrl}">
         </div>
       `;
-
-      // Update carousel items with the latest post data
-      carouselItems.forEach(carouselItem => {
-        carouselItem.innerHTML = `
-          <div class="Carousel_content-title" >
-            <h3>${datos.title}</h3>     
-            <img class="fluid carousel_img" src="${datos.imgUrl}">
-          </div>
-        `;
-      });
     });
+
+    postContainer.innerHTML = pintarPublicacion;
+
+    // Get the latest 6 posts
+    const latestSixPosts = latestPosts.slice(0, 6);
+
+    // Update carousel items with the latest 6 posts data
+    carouselItems.forEach((carouselItem, index) => {
+      const postData = latestSixPosts[index];
+
+      // Append to the existing inner HTML content
+      carouselItem.innerHTML += `
+        <h3 class="carousel-content_title">${postData.title}</h3>
+        <img class="fluid carousel_img" src="${postData.imgUrl}">
+      `;
+    });
+
 
     postContainer.innerHTML = pintarPublicacion;
   });
