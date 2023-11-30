@@ -1,3 +1,4 @@
+// post.js
 import {
   saveTask,
   getTasks,
@@ -33,14 +34,14 @@ window.addEventListener('DOMContentLoaded', async () => {
 
     postContainer.innerHTML = pintarPublicacion;
 
-    // Get the latest 6 posts
-    const latestSixPosts = latestPosts.slice(0, 6);
+    // obtener los últimos 8 post
+    const latestSixPosts = latestPosts.slice(0, 8);
 
-    // Update carousel items with the latest 6 posts data
+    // actualizar el carousel con los 8 publicaciones
     carouselItems.forEach((carouselItem, index) => {
       const postData = latestSixPosts[index];
 
-      // Append to the existing inner HTML content
+      // pintar el título y la imagen en el carousel
       carouselItem.innerHTML += `
         <h3 class="carousel-content_title">${postData.title}</h3>
         <img class="fluid carousel_img" src="${postData.imgUrl}">
@@ -61,7 +62,7 @@ postForm.addEventListener('submit', (e) => {
 
   saveTask(title.value, description.value, imgUrl.value);
 
-  // This function clears the form each time we submit
+
   postForm.reset();
   alert("Publicado");
 });
